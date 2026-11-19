@@ -3,6 +3,6 @@ el nom de l’usuari amb un prompt() i escrigui un text a
 la consola que digui “Hola nomUsuari” 
 */
 
-let nom = parseInt(prompt("nom?"));
+let nom = prompt("nom?");
 
 console.log("hola " + nom);
