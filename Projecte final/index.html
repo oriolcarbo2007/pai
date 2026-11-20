@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ca">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Campus UAB 3D</title>
+<link rel="stylesheet" href="https://js.arcgis.com/4.30/esri/themes/light/main.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700&family=Instrument+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="view"></div>
+<div class="title"><h1>Campus UAB 3D</h1><span>Passa el ratolí per un icona d'edifici</span></div>
+<div id="tip" class="tip" hidden>
+  <span class="kind" id="tip-kind"></span>
+  <h2 id="tip-name"></h2>
+  <p class="desc" id="tip-desc"></p>
+</div>
+<div id="warn" class="warn" hidden></div>
+
+<details id="filter" class="filter" open>
+  <summary>Filtre d'edificacions</summary>
+  <div class="filter-body">
+    <div id="filter-list"></div>
+    <div class="fbtns">
+      <button type="button" id="f-all">Mostra-ho tot</button>
+      <button type="button" id="f-none">Amaga-ho tot</button>
+    </div>
+  </div>
+</details>
+
+<div id="edit" class="edit" hidden>
+  <strong>Mode edició de posicions</strong>
+  <span>Tria un element i fes clic al mapa on ha d'anar. Després copia el text de sota.</span>
+  <select id="edit-select"></select>
+  <textarea id="edit-out" readonly></textarea>
+  <button id="edit-copy" type="button">Copia les coordenades</button>
+</div>
+<div class="credit">Escena 3D: OpenData UAB</div>
+
+<script src="https://js.arcgis.com/4.30/"></script>
+<script src="app.js"></script>
+</body>
+</html>
